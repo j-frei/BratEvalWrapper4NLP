@@ -29,7 +29,7 @@ export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
 Eventually, install the package using pip: **`python3 -m pip install bratevalwrapper4nlp`**
 
 ### Example
-The following script demonstrates some transformation of annotation data.
+The following script demonstrates the use of the `evaluate` function.
 ```python
 import json
 from bratevalwrapper4nlp import evaluate
