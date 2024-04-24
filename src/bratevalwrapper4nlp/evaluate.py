@@ -1,6 +1,6 @@
 import subprocess as sp
 import tempfile
-from typing import Union, Literal, List, Dict, Union
+from typing import Union, Literal, List, Dict
 from .wrapper import jarfile
 from .io import write_to_brat, parse_output
 
