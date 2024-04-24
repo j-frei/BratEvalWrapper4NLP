@@ -10,20 +10,23 @@ Given the availability of the Git, Java JDK and Maven, it clones and compiles br
 ### Install
 First, make sure to install a Java JDK environment as well as Maven (for compiling the JAR file) before using the wrapper.
 
-For Ubuntu, use the following commands:
+<details>
+<summary>[Click to show] Preparation instructions for Ubuntu</summary>
+
 ```bash
-# Install Java (11) and Maven first
-sudo apt install -y openjdk-11-jdk-headless and maven
+# Install Java (11, or 21), Maven and Git first
+sudo apt install -y openjdk-21-jdk-headless maven git
 
 # Add JAVA_HOME variable to ~/.bashrc
 echo 'export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")' >> $HOME/.bashrc
 
 # Login again to re-load the JAVA_HOME environment variable (or export the variable manually)
 export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
-
-# Finally, install the package using pip
-python3 -m pip install bratevalwrapper4nlp
 ```
+
+</details>
+
+Eventually, install the package using pip: **`python3 -m pip install bratevalwrapper4nlp`**
 
 ### Example
 The following script demonstrates some transformation of annotation data.
