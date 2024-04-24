@@ -60,10 +60,10 @@ for src, doc in {"Ground Truth": doc_ground_truth, "Prediction": doc_prediction}
 
 # Run evaluation
 score_response = evaluate(
-    doc_ground_truth,
-    doc_prediction,
-    span_match="overlap",
-    type_match="exact"
+    doc_ground_truth,     # or list of docs: [doc_ground_truth]
+    doc_prediction,       # or list of docs: [doc_prediction]
+    span_match="overlap", # "overlap", "exact", or float (overlap percentage between 1.0 and 0.0)
+    type_match="exact"    # "exact", or "inexact" (ignores label classes)
 )
 scores = score_response["scores"]
 
