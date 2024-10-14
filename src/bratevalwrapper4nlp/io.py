@@ -5,11 +5,11 @@ def write_to_brat(jsonl: dict, filename_prefix: str, directory: str):
     # write txt file
     txt = jsonl["text"]
     anns = jsonl["label"]
-    with open(os.path.join(directory, "{}.txt".format(filename_prefix)), "w") as f:
+    with open(os.path.join(directory, "{}.txt".format(filename_prefix)), "w", encoding="utf-8") as f:
         f.write(txt)
 
     # write ann file
-    with open(os.path.join(directory, "{}.ann".format(filename_prefix)), "w") as f:
+    with open(os.path.join(directory, "{}.ann".format(filename_prefix)), "w", encoding="utf-8") as f:
         f.write("\n".join([
             "T{}\t{} {} {}\t{}".format(
                 ann_id+1,
